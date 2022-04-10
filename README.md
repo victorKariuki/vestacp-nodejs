@@ -17,7 +17,7 @@ This template read `.env` file, `.nvm` for Node version, and `package.json` for 
 
 ## WHERE DEPLOY MY APP?
 
-In VestaCp the user must be a enabled `bash` ssh, if set as `none` this si a cause to stack.
+In VestaCp the user must be a enabled `bash` ssh, if set as `none` this is a cause to stack.
 Upload your app with ssh on this path: `/home/<user>/web/<domain>/nodeapp/`.
 Here you can use files `.env` with Enviroment variables, `.nvm` or `.node-version` for specify NodeJs version.
 
