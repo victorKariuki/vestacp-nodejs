@@ -6,10 +6,10 @@ server {
 
     location / {
         #single node
-        #proxy_pass http://127.0.0.1:3000;
+        proxy_pass http://127.0.0.1:3000;
 
         #unix socket mode
-        proxy_pass      http://unix:%home%/%user%/actions-runner/_work/%domain%/%domain%/bin/app.sock;
+        #proxy_pass      http://unix:%home%/%user%/actions-runner/_work/%domain%/%domain%/bin/app.sock;
 
         
         location ~* ^.+\.(%proxy_extensions%)$ {
@@ -27,10 +27,10 @@ server {
 
     location @fallback {
         #single node
-        #proxy_pass     http://127.0.0.1:3000;
+        proxy_pass     http://127.0.0.1:3000;
 
         #unix socket mode
-        proxy_pass      http://unix:%home%/%user%/actions-runner/_work/%domain%/%domain%/bin/app.sock;
+        #proxy_pass      http://unix:%home%/%user%/actions-runner/_work/%domain%/%domain%/bin/app.sock;
     }
 
     location ~ /\.ht    {return 404;}
